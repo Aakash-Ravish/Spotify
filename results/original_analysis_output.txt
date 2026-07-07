@@ -1,0 +1,78 @@
+rows after cleaning: 20592
+
+========================================================================
+Q14. Which artists convert viewers into fans?
+artist | tracks | total_views | likes_per_1k_views
+j-hope | 10 | 663527708 | 48.8
+ENHYPEN | 10 | 422723629 | 44.8
+Dino James | 10 | 245075570 | 30.2
+Aaron Smith | 10 | 536905039 | 27.8
+Luvli | 10 | 536486111 | 27.8
+Ashe | 10 | 122583586 | 27.7
+Conan Gray | 10 | 302929573 | 26.9
+girl in red | 10 | 282610901 | 26.7
+NCT DREAM | 10 | 628549039 | 25.3
+Clairo | 10 | 115514168 | 24.9
+
+========================================================================
+Q14. Which artists convert viewers into fans?
+artist | tracks | total_views | likes_per_1k_views
+The Wiggles | 10 | 148786716 | 0.1
+Adolescent's Orquesta | 10 | 179252455 | 0.7
+The Kiboomers | 10 | 789813194 | 1.3
+La Sonora Dinamita | 10 | 2328508757 | 1.6
+Simone Sommerland | 10 | 231629276 | 1.6
+
+========================================================================
+Q15. Do audio features predict streaming success?
+observed_hidden_gems | expected_if_independent | total_tracks
+1272 | 1251.0 | 20016
+
+========================================================================
+Q16. How platform-dependent are artists?
+most_played_on | tracks | pct
+Youtube | 4900 | 23.8
+Spotify | 15692 | 76.2
+
+========================================================================
+Q16. How platform-dependent are artists?
+artist | tracks | pct_youtube
+Alex Zurdo | 10 | 100.0
+Peter Groeger | 10 | 100.0
+Luvli | 10 | 100.0
+Die drei ??? | 10 | 100.0
+Youjeen | 10 | 100.0
+CoComelon | 10 | 100.0
+Ke Personajes | 10 | 100.0
+Jatin-Lalit | 10 | 100.0
+
+========================================================================
+Q17. Do singles actually outperform album tracks?
+album_type | tracks | avg_streams | median_streams
+album | 14832 | 146821437.0 | 54152250.0
+compilation | 787 | 78315546.0 | 38107491.0
+single | 4973 | 98961866.0 | 30846528.0
+
+========================================================================
+Q18. What actually correlates with streams?
+energy_vs_loudness | danceability_vs_streams | energy_vs_streams | valence_vs_streams | speechiness_vs_streams | duration_vs_streams
+0.745 | 0.074 | 0.043 | -0.013 | -0.022 | -0.011
+
+========================================================================
+Q19. One-hit wonders vs consistent catalogues.
+artist | tracks | avg_streams_m | cv
+Kimbra | 10 | 136.0 | 3.05
+Tammi Terrell | 10 | 105.0 | 2.76
+Gotye | 10 | 150.0 | 2.74
+Plain White T's | 10 | 113.0 | 2.43
+John Legend | 10 | 252.0 | 2.38
+
+========================================================================
+Q19. One-hit wonders vs consistent catalogues.
+artist | tracks | avg_streams_m | cv
+Original Broadway Cast of Hamilton | 10 | 192.0 | 0.19
+Leslie Odom Jr. | 10 | 176.0 | 0.23
+XXXTENTACION | 10 | 1322.0 | 0.29
+Joan Sebastian | 10 | 141.0 | 0.32
+Maroon 5 | 10 | 1072.0 | 0.33
+
