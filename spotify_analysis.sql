@@ -38,15 +38,15 @@ SELECT COUNT(DISTINCT ARTIST) FROM SPOTIFY;
 
 SELECT DISTINCT ALBUM_TYPE FROM SPOTIFY;
 
-SELECT MAx(duration_min) From spotify
+SELECT MAx(duration_min) From spotify;
 
-SELECT Min(duration_min) From spotify
+SELECT Min(duration_min) From spotify;
 
-SELECT * FROM SPOTIFY 
-WHERE DURATION_MIN = '0'
+SELECT * FROM SPOTIFY
+WHERE DURATION_MIN = '0';
 
 DELETE FROM SPOTIFY
-WHERE DURATION_MIN = '0'
+WHERE DURATION_MIN = '0';
 
 
 SELECT * FROM SPOTIFY 
@@ -63,7 +63,6 @@ SELECT DISTINCT CHANNEL FROM SPOTIFY;
 --Q.3Get the total number of comments for tracks where licensed = TRUE.
 --Q.4Find all tracks that belong to the album type single.
 --Q.5Count the total number of tracks by each artist.
-*/
 
 --Q.1Retrieve the names of all tracks that have more than 1 billion streams.
 
@@ -91,9 +90,9 @@ Where album_type = 'single';
 --Q.5Count the total number of tracks by each artist.
 Select artist, ---1
 count(*) AS total_no_song --1 2 
-From spotify 
+From spotify
 group by artist
-Order by 2 DESC
+Order by 2 DESC;
 
 ------------------------------------------------------------------------------------------
 
@@ -107,10 +106,10 @@ Order by 2 DESC
 
 --Q.6Calculate the average danceability of tracks in each album.
 
-Select album, avg(danceability) as Avg_danceability 
+Select album, avg(danceability) as Avg_danceability
 From spotify
 Group by 1
-Order by 2 DESC
+Order by 2 DESC;
 
 --Q.7Find the top 5 tracks with the highest energy values.
 
@@ -118,8 +117,8 @@ Select track,
 max(energy)  As energy
 From spotify
 Group by 1
-Order By 2 
-Limit 5; 
+Order By 2 DESC
+Limit 5;
 
 --Q.8List all tracks along with their views and likes where official_video = TRUE.
 
@@ -138,8 +137,8 @@ Select
 	   track,
 	   sum(views) as total_views
 	From spotify
-	Group By 1, 2 
-	Order by 3 DESC
+	Group By 1, 2
+	Order by 3 DESC;
 
 --Q.10 Retrieve the track names that have been streamed on Spotify more than YouTube.
 
@@ -151,7 +150,7 @@ Select * From
 from spotify 
 Group by 1) as t1
  Where stream_on_spotify > stream_on_youtube
-AND  stream_on_youtube <> 0
+AND  stream_on_youtube <> 0;
 
 
 ------------------------------------------------------------------------------------------
@@ -176,14 +175,14 @@ FRom spotify
 Group by 1, 2
 order by 1,3  DESC)
 Select * From ranking_artist
-Where rank <=3
+Where rank <=3;
 
 -- Q12 Write a query to find tracks where the liveness score is above the average.
 
 Select track, liveness From spotify 
 where liveness > (Select AVG(liveness) from spotify);
 
-Select AVG(liveness) from spotify -0.19
+Select AVG(liveness) from spotify; -- ≈ 0.19
 
 -- Q 13 Use a WITH clause to calculate the difference between
 --the highest and lowest energy values for tracks in each album.
@@ -202,7 +201,7 @@ SELECT
 	album,
 	highest_energy - lowest_energy as energy_diff
 FROM cte
-ORDER BY 2 DESC
+ORDER BY 2 DESC;
 
 
 
